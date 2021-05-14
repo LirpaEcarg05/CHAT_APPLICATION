@@ -6,7 +6,9 @@
     <!-- LOGO -->
     <div class="topbar-left">
         <div class="text-center">
-            <a href="/dashboard" class="logo"><%= data.user_username %></a>
+            <a href="/dashboard" class="logo">
+                <%= data.user_username %>
+            </a>
         </div>
     </div>
 
@@ -17,20 +19,21 @@
                 <li class="menu-title">Main</li>
                 <li>
                     <a href="/dashboard" class="waves-effect">
-                        <i class="mdi mdi-airplay"></i>
-                        <span> Dashboard </span>
+                        <i class="mdi mdi-message"></i>
+                        <span> Group Chat </span>
                     </a>
                 </li>
 
-                <li class="menu-title" >Chat board</li>
+
                 <li>
                     <a href="/chat_page" onclick="chat_option();" class="waves-effect">
-                        <i class="mdi mdi-airplay"></i>
-                        <span> Chat Option </span>
+                        <i class="mdi mdi-lock"></i>
+                        <span> Private Chat </span>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="clearfix"></div>
-    </div> <!-- end sidebarinner -->
+    </div>
+    <!-- end sidebarinner -->
 </div>
