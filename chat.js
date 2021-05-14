@@ -701,3 +701,10 @@ app.post('/change_password_update', function (req, res) {
   }
 });
 // change password end here
+
+
+// ---------------------------------
+io.on('connection', socket =>{
+  console.log('new User')
+  socket.emit('chat-message', 'Hello World')
+})

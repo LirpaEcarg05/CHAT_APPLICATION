@@ -4,9 +4,9 @@
   "description": "Chat application",
   "main": "chat.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon chat.js"
   },
-  "author": "nishan vaghani",
+  "author": "SD ELECTIVE",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",

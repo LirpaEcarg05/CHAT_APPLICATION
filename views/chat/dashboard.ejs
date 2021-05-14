@@ -18,6 +18,9 @@
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
+    <script defer src="http://localhost:2005/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+
 </head>
 <!-- user data in session here -->
 <% user_session.forEach(function(data){ %>
@@ -63,6 +66,12 @@
                             </div>
                         </div>
                         <!-- end page title end breadcrumb -->
+
+                        <div id="message-container"></div>
+                        <form id="send-container">
+                            <input type="text" id="message-input">
+                            <button type="submit" id="send-button">SEND</button>
+                        </form>
 
                     </div><!-- container -->
                 </div> <!-- Page content Wrapper -->
