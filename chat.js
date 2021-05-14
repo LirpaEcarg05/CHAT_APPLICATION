@@ -37,9 +37,9 @@ var session_data;
 // io.use(sharedsession(session));
 
 var mysqlConnction = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
+  host: '192.168.0.74',
+  user: 'SD-ELECTIVE_CHAT',
+  password: 'asdf123',
   database: 'node_chat'
 });
 
