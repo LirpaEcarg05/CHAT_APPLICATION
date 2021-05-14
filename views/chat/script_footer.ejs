@@ -591,6 +591,40 @@
 
     });
 
+    
+
+
+    // group chat ni nga code
+    const user="<%=data.user_username %>";
+console.log($('.username').val())
+socket.emit("new join",user)
+
+socket.on('new join',(data)=>{ 
+    if(data==user){
+        $('.message-container').append(`<div>
+        You have join the group chat</div>`)
+    }else{
+        $('.message-container').append(`<div>
+        ${data} join the group chat</div>`)
+    }
+   
+})
+
+$('.send-button').click(function(){
+    let message=$('.message-input').val();
+    socket.emit("akon message", {message:message,sender:user})
+    $('.message-input').val('')
+    return false;
+})
+
+socket.on('akon message',(data)=>{
+    $('.message-container').append(`<div>
+    ${data.sender}:
+    ${data.message}</div>`)
+})
+
+    // end sa group chat code
+    
     function btn_click() {
         var admin_id = "<%= data.user_id %>";
         var admin_username = "<%= data.user_username %>";

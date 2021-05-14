@@ -68,6 +68,15 @@ var users = new Array();
 var user_tabs = new Array();
 
 io.on('connection', function (socket) {
+
+  socket.on('new join',(data)=>{
+    io.emit('new join',data)
+  })
+
+  socket.on('akon message',(data)=>{
+    io.emit('akon message',data)
+  })
+
   console.log('connection with socket.io, completed');
 
   // here we defined user is joni a room
@@ -704,7 +713,3 @@ app.post('/change_password_update', function (req, res) {
 
 
 // ---------------------------------
-io.on('connection', socket =>{
-  console.log('new User')
-  socket.emit('chat-message', 'Hello World')
-})

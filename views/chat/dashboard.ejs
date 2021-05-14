@@ -18,8 +18,8 @@
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
-    <script defer src="http://localhost:2005/socket.io/socket.io.js"></script>
-    <script defer src="script.js"></script>
+    <!-- <script defer src="http://localhost:2005/socket.io/socket.io.js"></script>
+    <script defer src="assets/js/client.js"></script> -->
 
 </head>
 <!-- user data in session here -->
@@ -46,9 +46,12 @@
         <!-- Start right Content here -->
 
         <div class="content-page">
+            <p>
+                
+            </p>
             <!-- Start content -->
             <div class="content">
-
+<input type="hidden" class="username" value="<%= data.user_username %>">
                 <!-- Top Bar Start -->
                 <% include top_header.ejs %>
 
@@ -67,10 +70,10 @@
                         </div>
                         <!-- end page title end breadcrumb -->
 
-                        <div id="message-container"></div>
-                        <form id="send-container">
-                            <input type="text" id="message-input">
-                            <button type="submit" id="send-button">SEND</button>
+                        <div class="message-container"></div>
+                        <form id="send-container" onformsubmit="return false">
+                            <input type="text" class="message-input">
+                            <button type="submit" class="send-button">SEND</button>
                         </form>
 
                     </div><!-- container -->
